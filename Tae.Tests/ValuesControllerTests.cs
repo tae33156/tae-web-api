@@ -17,7 +17,7 @@ namespace Tae.Tests
         [Test]
         public void TestSuccess()
         {
-            Assert.True(true);
+            Assert.True(false)
         }
     }
 }
