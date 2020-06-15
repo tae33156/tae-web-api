@@ -1,0 +1,75 @@
+format_version: 3
+pipelines:
+  test-gocd-pipeline:
+    group: My-Pipelines
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git:
+        git: https://github.com/tae33156/tae-web-api
+        shallow_clone: false
+        auto_update: true
+        branch: master
+    stages:
+    - test-gocd-stage:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          test-gocd-job:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - restore
+                - nuget
+                - package
+                command: echo
+                run_if: passed
+            - exec:
+                arguments:
+                - restore
+                - tae-web-api.sln
+                command: dotnet
+                run_if: passed
+            - exec:
+                arguments:
+                - clean
+                - project
+                command: echo
+                run_if: passed
+            - exec:
+                arguments:
+                - clean
+                - project
+                command: dotnet
+                run_if: passed
+            - exec:
+                arguments:
+                - build
+                - project
+                command: echo
+                run_if: passed
+            - exec:
+                arguments:
+                - build
+                - tae-web-api.sln
+                command: dotnet
+                run_if: passed
+            - exec:
+                arguments:
+                - run
+                - unit
+                - test
+                command: echo
+                run_if: passed
+            - exec:
+                arguments:
+                - test
+                - tae-web-api.sln
+                command: dotnet
+                run_if: passed
