@@ -10,7 +10,7 @@ pipelines:
         git: https://github.com/tae33156/tae-web-api
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: develop
     stages:
     - test-gocd-stage:
         fetch_materials: true
