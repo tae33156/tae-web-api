@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tae-web-api", "tae-web-api\tae-web-api.csproj", "{C796275A-CF82-459F-82E7-5977660EE8AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tae-web-api", "tae-web-api\tae-web-api.csproj", "{C796275A-CF82-459F-82E7-5977660EE8AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".test-projects", ".test-projects", "{237CA20E-3990-4264-9FDF-E70B828A8791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tae.Tests", "Tae.Tests\Tae.Tests.csproj", "{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{C796275A-CF82-459F-82E7-5977660EE8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C796275A-CF82-459F-82E7-5977660EE8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C796275A-CF82-459F-82E7-5977660EE8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8C85B49-EDE8-46BC-842B-AA2BDE26FA9F} = {237CA20E-3990-4264-9FDF-E70B828A8791}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42AD50BC-27A6-4C64-8AD4-8889634C86CB}
