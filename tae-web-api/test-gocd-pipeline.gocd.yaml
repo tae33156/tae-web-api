@@ -45,7 +45,7 @@ pipelines:
             - exec:
                 arguments:
                 - clean
-                - project
+                - tae-web-api.sln
                 command: dotnet
                 run_if: passed
             - exec:
